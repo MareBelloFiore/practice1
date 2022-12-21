@@ -1,0 +1,110 @@
+<script>
+
+
+
+  var a = [1, 2, 3];
+  var b = '김밥';
+  var c = [...b, ...a];
+  console.log(c);
+
+  //['김','밥',1,2,3]
+
+
+  var a = [1, 2, 3];
+  var b = ['you', 'are'];
+  var c = function (a, b) {
+    console.log([[1, 2, 3], 'you', 'are'][1])
+  }
+  c(a, b);
+
+  // 'you'
+
+
+
+  function 함수(a = 5, b = a * 2) {
+    console.log(a + b);
+    return 10
+  }
+  함수(3);
+
+  // (3, 6) 이므로 3+6 = 9 출력
+
+
+  function 함수(a = 5, b = a * 2) {
+    console.log(a + b);
+  }
+  함수(undefined, undefined);
+
+  // (5, 10) 이므로 5 + 10 = 15 출력
+
+
+
+  function 어레이(...rest) {
+    return rest
+  }
+
+  var newArray = 어레이(1, 2, 3, 4, 5);
+  console.log(newArray);
+
+
+  // 파라미터를 array 자료형으로 만들어주는 어레이() 함수 만들기
+
+
+
+  Math.max(5, 6, 4, 3)
+  var numbers = [2, 3, 4, 5, 6, 1, 3, 2, 5, 5, 4, 6, 7];
+
+  console.log(Math.max(...numbers));
+
+
+  // Math.max()에 어레이 넣기
+  //(...numbers)를 사용해서 numbers의 대괄호를 지워주어 파라미터로 사용 가능하게 됨
+
+
+
+
+
+  // console.log(['b', 'c', 'a'].sort());
+
+  //[ 'a', 'b', 'c' ] 출력됨
+
+  function 정렬(글자) {
+    console.log(...[...글자].sort());
+  }
+
+  정렬('bear');
+
+
+  // 집어넣은 문자를 알파벳순으로 정렬해주는 정렬() 함수
+
+
+
+
+
+
+
+
+  글자세기('aacbbbdddd');
+  //{a : 2, b : 3, c : 1}
+
+  function 글자세기(글자) {
+
+    var 결과 = {};
+    [...글자].forEach(function (a) {
+      // 만약 결과에 a가 있다면 +1 해주시고
+      // 없으면 a : 1 집어넣으세요
+      if (결과[a] > 0) {
+        결과[a] = 결과[a] + 1;
+      } else {
+        결과[a] = 1;
+      }
+    });
+
+    console.log(결과);
+  }
+
+
+
+
+
+</script>

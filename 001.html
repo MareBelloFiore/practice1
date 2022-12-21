@@ -1,21 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<div></div>
+<button id="button">버튼</button>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<script>
 
-<body>
-  <h1>hello world</h1>
-  <p id="one">hello world</p>
-  <p>hello world</p>
-  <p>hello world</p>
-  <p>hello world</p>
-  <p>hello world</p>
-  <script src="test.js"></script>
-</body>
+  //사람.sayHi()하면 안녕 나는 문형섭 출력
+  var 사람 = {
+    name: '문형섭',
+    sayHi: function () {
+      console.log('안녕 나는' + this.name)
+    }
+  }
+  console.log(사람.sayHi());
 
-</html>
+
+
+
+  // 자료.전부더하기() 하면 내부 array 전부 더하기
+  var 자료 = {
+    data: [1, 2, 3, 4, 5]
+  }
+
+  자료.전부더하기 = function () {
+    var 합 = 0;
+    this.data.forEach(function (a) {
+      합 = 합 + a;
+    });
+    console.log(합);
+  }
+
+  자료.전부더하기();
+  /* 합계 저장하는 변수 제작. 반복문이 돌 때마다 a값은 1,2,3,4,5가 됨.
+  그러니까 반복문 돌 때마다 합계에 a를 더함.
+  반복문 다 끝나고 합계 출력
+  */
+
+
+
+  //버튼을 누르면 this.innerHTML을 1초 후 출력하기
+  document.getElementById('버튼').addEventListener('click', function () {
+    setTimeout(() => { console.log(this.innerHTML) }, 1000);
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
