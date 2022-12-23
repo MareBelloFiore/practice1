@@ -1,0 +1,33 @@
+<script>
+
+
+  // var 학생1 = {
+  //   name: 'kim',
+  //   age: 15,
+  //   sayHi() {
+  //     console.log('안녕하세요 ' + this.name + '입니다.')
+  //   }
+  // }
+
+  // 학생1.sayHi();
+
+  function 기계(이름, 나이) {   //기계: object 생성기계(=constructor)
+    this.name = 이름;      //this는 기계에서 새로 생성되는 Obj(=instance)
+    this.age = 나이;
+    this.sayHi = function () {
+      console.log('안녕하세요 ' + this.name + '입니다.')
+    }
+  }
+
+  기계.prototype.gender = '남';
+
+
+  var 학생1 = new 기계('Park', 16);
+  var 학생2 = new 기계('kim', 17);
+
+  학생1.toString();
+
+
+
+
+</script>

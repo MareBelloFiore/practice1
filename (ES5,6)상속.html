@@ -1,0 +1,44 @@
+<script>
+
+
+  //Object.create(프로토타입object);
+
+  var 부모 = { name: 'kim', age: 50 };
+
+  var 자식 = Object.create(부모);   // prototype을 부모로 해주세요
+  자식.age = 20;
+
+
+  var 손자 = Object.create(자식);
+
+  손자.age;
+
+  // ES5 방식
+
+
+  class 부모 {
+    constructor(이름, 나이) {
+      this.name = 이름;
+      this.age = 나이;
+      // this.sayHi = function () { console.log('hello') }
+    }
+    sayHi = function () {
+      console.log('hello')
+    }
+    sayHello() {
+      console.log('안녕하세요');
+    }
+  }
+
+  var 자식 = new 부모('Moon', 30);
+
+  // ES6 방식
+
+
+
+
+
+
+
+
+</script>

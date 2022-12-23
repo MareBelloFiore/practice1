@@ -1,0 +1,46 @@
+<script>
+
+  // var 학생1 = { name: 'Kim', age: 20 }
+  // var 학생2 = { name: 'Park', age: 21 }
+  // var 학생3 = { name: 'Lee', age: 22 }
+
+  // 위 같은 양식의 constructor 제작하기
+  // 여기에 학생1.sayHi()라고 사용하면 "안녕 나는 Kim이야" 출력하는 함수 추가
+
+  function 기계(이름, 나이) {
+    this.name = 이름;
+    this.age = 나이;
+    this.sayHi = function () {
+      console.log('안녕 나는 ' + this.name + '이야 ');
+    }
+  }
+
+
+  var 학생1 = new 기계('park', 20);
+  var 학생2 = new 기계('kim', 21);
+  var 학생3 = new 기계('moon', 27);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
