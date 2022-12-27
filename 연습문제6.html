@@ -1,0 +1,99 @@
+<script>
+
+  // Q1
+
+  class 강아지 {
+    constructor(타입, 색상) {
+      this.type = 타입;
+      this.color = 색상;
+    }
+    한살먹기() {
+      console.log(this.age + 1);
+    }
+  }
+
+  // var 강아지1 = new 강아지('말티즈', 'white');
+  // var 강아지2 = new 강아지('진돗개', 'brown');
+
+
+  // Q2(extends로 강아지 속성 물려받기) & Q3(고양이만 쓸 수 있는 한살먹기 함수 추가)
+
+  class 고양이 extends 강아지 {
+    constructor(타입, 색상, 나이) {
+      super(타입, 색상);
+      this.age = 나이;
+    }
+    한살먹기() {
+      super.한살먹기();
+    }
+  }
+
+  // var 고양이1 = new 고양이('코숏', 'white', 5);
+  // var 고양이2 = new 고양이('러시안블루', 'brown', 2);
+
+
+
+  // Q4
+
+  class Unit {
+    constructor() {
+      this.공격력 = 5;
+      this.체력 = 100;
+    }
+    get battlePoint() {
+      return this.공격력 + this.체력
+    }
+    set heal(힐) {
+      this.체력 = this.체력 + 힐;
+    }
+  }
+
+  //var 슬라임 = new Unit();
+
+
+
+  //Q5
+
+
+  var data = {
+    odd: [],
+    even: [],
+    setter함수: function (...숫자들) {
+      숫자들.forEach((a) => {
+        if (a % 2 == 1) {
+          this.odd.push(a)  //홀수일때
+        } else {
+          this.even.push(a)  //짝수일때
+        }
+        //   a가 홀수면 this.odd에 push(a)하고.. 
+        // b가 짝수면 this.even에 push(a)하고...
+      });
+    },
+    get getter함수() {
+      return [...this.odd, ...this.even].sort()
+    }
+  };
+
+  data.setter함수(1, 2, 3, 4, 5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
